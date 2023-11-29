@@ -3,7 +3,7 @@ part of 'advicer_bloc.dart';
 @immutable
 sealed class AdvicerState extends Equatable {
   @override
-  // TODO: implement props
+  
   List<Object?> get props => [];
 }
 

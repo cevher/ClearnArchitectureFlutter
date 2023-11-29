@@ -5,7 +5,9 @@ import 'package:dartz/dartz.dart';
 
 class AdviceUseCases {
   
-  final adviceRepo = AdviceRepoImpl();
+  final AdviceRepoImpl adviceRepo;
+
+  AdviceUseCases({required this.adviceRepo});
 
   Future<Either<Failure, AdviceEntity>> getAdvice() async {
     // call a reepository to get data (failure or data)

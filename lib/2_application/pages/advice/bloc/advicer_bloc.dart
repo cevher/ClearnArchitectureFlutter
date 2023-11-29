@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:advicer/1_domain/entities/advice_entity.dart';
 import 'package:advicer/1_domain/failures/failures.dart';
 import 'package:advicer/1_domain/usecases/advice_usecases.dart';
@@ -13,9 +15,9 @@ const serverFailureMessage = "Server failure happened!";
 const cacheFailureMessage = "Something gone wrong! cache failure!";
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
+  final AdviceUseCases adviceUseCases;
 
-  AdvicerBloc() : super(AdvicerInitial()) {
-    final AdviceUseCases adviceUseCases = AdviceUseCases();
+  AdvicerBloc({required this.adviceUseCases}) : super(AdvicerInitial()) {
     // could also use other usecases
 
     on<AdvicerEvent>((event, emit) async {
